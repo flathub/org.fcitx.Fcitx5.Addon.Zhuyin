@@ -48,13 +48,10 @@ modules:
     sources:
       - type: git
         url: https://github.com/fcitx/fcitx5-zhuyin
-        tag: 5.1.2
+        tag: 5.1.3
       - type: file
         url: http://download.fcitx-im.org/data/model.text.20241103.tar.zst
         sha256: bb4a9789b6e0fde1c6547f659ce591de5e691ee3a8345d3c1c74eaf92b31ea48
         dest: data
-      - type: patch
-        path: cp-19dd04ac1afaaef00ff40a497d4e135dd5a8609e.patch
-        use-git: true
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
