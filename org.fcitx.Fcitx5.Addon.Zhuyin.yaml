@@ -27,13 +27,13 @@ modules:
     sources:
       - type: git
         url: https://github.com/libpinyin/libpinyin
-        tag: 2.10.3
+        tag: 2.11.91
         x-checker-data:
           type: anitya
           project-id: 1353
           stable-only: true
           tag-template: ${version}
-        commit: 954ecc3522686fb30a78d12080da1145df3f24da
+        commit: 0c5e80e1200f84fab185d1c5bde458b770a0636c
       - type: file
         url: https://downloads.sourceforge.net/libpinyin/model20.text.tar.gz
         sha256: 59c68e89d43ff85f5a309489499cbcde282d2b04bd91888734884b7defcb1155
@@ -48,7 +48,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/fcitx/fcitx5-zhuyin
-        tag: 5.1.6
+        tag: 5.1.7
+        commit: edbd26e70a92956d1a0dda3b30e83b8bae54552b
       - type: file
         url: http://download.fcitx-im.org/data/model.text.20241103.tar.zst
         sha256: bb4a9789b6e0fde1c6547f659ce591de5e691ee3a8345d3c1c74eaf92b31ea48
