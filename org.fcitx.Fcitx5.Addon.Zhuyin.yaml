@@ -48,8 +48,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/fcitx/fcitx5-zhuyin
-        tag: 5.1.7
-        commit: edbd26e70a92956d1a0dda3b30e83b8bae54552b
+        tag: 5.1.8
+        commit: 7d4d23cbe9a26e26a8af3393385cf0446a5043bf
       - type: file
         url: http://download.fcitx-im.org/data/model.text.20241103.tar.zst
         sha256: bb4a9789b6e0fde1c6547f659ce591de5e691ee3a8345d3c1c74eaf92b31ea48
