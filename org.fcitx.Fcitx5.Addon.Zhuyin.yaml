@@ -1,7 +1,7 @@
 app-id: org.fcitx.Fcitx5.Addon.Zhuyin
 runtime: org.fcitx.Fcitx5
 runtime-version: stable
-sdk: org.kde.Sdk//6.10
+sdk: org.kde.Sdk//6.11
 build-extension: true
 separate-locales: false
 build-options:
@@ -19,7 +19,20 @@ cleanup:
   - /lib/pkgconfig
   - '*.la'
 modules:
-  - modules/kyotocabinet.yaml
+  - name: kyotocabinet
+    config-opts:
+      - --disable-opt
+      - --disable-static
+    sources:
+      - type: archive
+        url: https://dbmx.net/kyotocabinet/pkg/kyotocabinet-1.2.80.tar.gz
+        sha512: 9fe0a92c9a76db5ce06ef4d5a551c05930f2a9c065ab695b030fdaf45692bfe88d91f1b75791f50d0772c699567744cd74f3ef407172874d4bba467989d54328
+        x-checker-data:
+          type: anitya
+          project-id: 1530
+          url-template: https://dbmx.net/kyotocabinet/pkg/kyotocabinet-${version}.tar.gz
+    post-install:
+      - rm ${FLATPAK_DEST}/lib/*.a
   - name: libpinyin
     config-opts:
       - --with-dbm=KyotoCabinet
@@ -48,8 +61,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/fcitx/fcitx5-zhuyin
-        tag: 5.1.8
-        commit: 7d4d23cbe9a26e26a8af3393385cf0446a5043bf
+        tag: 5.1.9
+        commit: 18511eca982a9ee6b7e9f9bc8edb030660ee8d1e
       - type: file
         url: http://download.fcitx-im.org/data/model.text.20241103.tar.zst
         sha256: bb4a9789b6e0fde1c6547f659ce591de5e691ee3a8345d3c1c74eaf92b31ea48
